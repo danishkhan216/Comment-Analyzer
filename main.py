@@ -35,7 +35,7 @@ def analyze_polarity_subjectivity(text):
     
     return polarity, subjectivity
  
- pre = st.text_input('Clean Text: ')
+ pre = st.text_input('Clean Text:')
     if pre:
         st.write(cleantext.clean(pre, clean_all= False, extra_spaces=True,
                                  stopwords=True ,lowercase=True ,numbers=True , punct=True))

@@ -1,43 +1,21 @@
-import nltk
-nltk.download('punkt')
-nltk.download('stopwords')
-nltk.download('wordnet')
-nltk.download('omw-1.4')
-
-# Import functions for data preprocessing & data preparation
-from nltk.sentiment.vader import SentimentIntensityAnalyzer
-
-from nltk.tokenize import word_tokenize
-from nltk.stem import WordNetLemmatizer
-from nltk.stem import PorterStemmer, LancasterStemmer
-from nltk.stem.snowball import SnowballStemmer
-from nltk.corpus import stopwords
-from nltk.corpus import wordnet
-import string
-from string import punctuation
-import nltk
-import re
 from textblob import TextBlob
 import pandas as pd
 import streamlit as st
 import cleantext
-st.header('Comment Analysis')
+
+
+st.header('Sentiment Analysis')
 with st.expander('Analyze Text'):
     text = st.text_input('Text here: ')
     if text:
         blob = TextBlob(text)
         st.write('Polarity: ', round(blob.sentiment.polarity,2))
         st.write('Subjectivity: ', round(blob.sentiment.subjectivity,2))
-def analyze_polarity_subjectivity(text):
-    # Get polarity and subjectivity
-    polarity = blob.sentiment.polarity
-    subjectivity = blob.sentiment.subjectivity
-    
-    return polarity, subjectivity
- 
- pre = st.text_input('Clean Text:')
+
+
+    pre = st.text_input('Clean Text: ')
     if pre:
-        st.write(cleantext.clean(pre, clean_all= False, extra_spaces=True,
+        st.write(cleantext.clean(pre, clean_all= False, extra_spaces=True ,
                                  stopwords=True ,lowercase=True ,numbers=True , punct=True))
 
 with st.expander('Analyze CSV'):

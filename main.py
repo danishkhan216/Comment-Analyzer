@@ -1,18 +1,3 @@
-import nltk
-nltk.download('punkt')
-nltk.download('stopwords')
-nltk.download('wordnet')
-nltk.download('omw-1.4')
-
-# Import functions for data preprocessing & data preparation
-from nltk.sentiment.vader import SentimentIntensityAnalyzer
-
-from nltk.tokenize import word_tokenize
-from nltk.stem import WordNetLemmatizer
-from nltk.stem import PorterStemmer, LancasterStemmer
-from nltk.stem.snowball import SnowballStemmer
-from nltk.corpus import stopwords
-from nltk.corpus import wordnet
 import string
 from string import punctuation
 import nltk

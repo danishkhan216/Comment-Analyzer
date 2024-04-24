@@ -7,7 +7,7 @@ st.header('Sentiment Analysis')
 with st.expander('Analyze Text'):
     text = st.text_input('Text here: ')
     if text:
-        blob = TextBlob(text)
+        blob =(text)
         st.write('Polarity: ', round(blob.sentiment.polarity,2))
         st.write('Subjectivity: ', round(blob.sentiment.subjectivity,2))
 def analyze_polarity_subjectivity(text):
@@ -26,7 +26,7 @@ with st.expander('Analyze CSV'):
     upl = st.file_uploader('Upload file')
 
     def score(x):
-        blob1 = TextBlob(x)
+        blob1 =(x)
         return blob1.sentiment.polarity
 
 #
@@ -55,7 +55,7 @@ if upl:
         st.download_button(
             label="Download data as CSV",
             data=csv,
-            file_name='sentiments.csv',
+            file_name='.csv',
             mime='text/csv',
         )
         

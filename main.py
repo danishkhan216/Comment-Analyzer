@@ -1,7 +1,6 @@
 import string
 from string import punctuation
 import re
-import TextBlob
 import pandas as pd
 import streamlit as st
 import cleantext

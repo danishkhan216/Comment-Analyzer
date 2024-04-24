@@ -1,6 +1,5 @@
 import string
 from string import punctuation
-import nltk
 import re
 from textblob import TextBlob
 import pandas as pd
